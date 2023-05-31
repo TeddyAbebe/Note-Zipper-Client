@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 const LandingPage = ({ history }) => {
   useEffect(() => {
@@ -25,16 +27,17 @@ const LandingPage = ({ history }) => {
               </div>
 
               <div className="mt-12 flex justify-evenly lg:py-0 lg:px-52 md:px-40 md:mt-8 sm:px-30 max-sm:px-30">
-                <a href="/login">
+                
+                <Link to="/login">
                   <Button
                     size="lg"
                     className="w-48 h-14 md:w-28 md:h-12 sm:w-24 max-sm:w-24"
                   >
                     Login
                   </Button>
-                </a>
+                </Link>
 
-                <a href="/register">
+                <Link to="/register">
                   <Button
                     size="lg"
                     className="w-48 h-14 md:w-28 md:h-12 sm:w-24 max-sm:w-24 "
@@ -42,7 +45,7 @@ const LandingPage = ({ history }) => {
                   >
                     Signup
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </Col>
