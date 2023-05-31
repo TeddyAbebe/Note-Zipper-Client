@@ -32,7 +32,7 @@ function SingleNote({ match, history }) {
   useEffect(() => {
     const fetching = async () => {
       const { data } = await axios.get(
-        `http://localhost:3001/api/notes/${match.params.id}`
+        `https://note-zipper-server-jf4h.onrender.com/api/notes/${match.params.id}`
       );
 
       setTitle(data.title);

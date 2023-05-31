@@ -30,7 +30,10 @@ export const listNotes = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:3001/api/notes`, config);
+    const { data } = await axios.get(
+      `https://note-zipper-server-jf4h.onrender.com/api/notes`,
+      config
+    );
 
     dispatch({
       type: NOTES_LIST_SUCCESS,
@@ -68,7 +71,7 @@ export const createNoteAction =
       };
 
       const { data } = await axios.post(
-        `http://localhost:3001/api/notes/create`,
+        `https://note-zipper-server-jf4h.onrender.com/api/notes/create`,
         { title, content, category },
         config
       );
@@ -109,7 +112,7 @@ export const updateNoteAction =
       };
 
       const { data } = await axios.put(
-        `http://localhost:3001/api/notes/${id}`,
+        `https://note-zipper-server-jf4h.onrender.com/api/notes/${id}`,
         { title, content, category },
         config
       );
@@ -148,7 +151,7 @@ export const updateNoteAction =
       };
 
       const { data } = await axios.delete(
-        `http://localhost:3001/api/notes/${id}`,
+        `https://note-zipper-server-jf4h.onrender.com/api/notes/${id}`,
         config
       );
 

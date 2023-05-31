@@ -23,7 +23,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:3001/api/users/login",
+      "https://note-zipper-server-jf4h.onrender.com/api/users/login",
       { email, password },
       config
     );
@@ -57,7 +57,7 @@ export const register = (name, email, password, pic) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:3001/api/users",
+      "https://note-zipper-server-jf4h.onrender.com/api/users",
       { name, pic, email, password },
       config
     );
@@ -91,7 +91,7 @@ export const updateProfile = (user) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:3001/api/users/profile",
+      "https://note-zipper-server-jf4h.onrender.com/api/users/profile",
       user,
       config
     );
