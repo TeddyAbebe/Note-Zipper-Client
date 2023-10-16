@@ -14,7 +14,6 @@ import { useState } from "react";
 
 const App = () => {
   const [search, setSearch] = useState("");
-
   return (
     <BrowserRouter>
       <Header setSearch={setSearch} />

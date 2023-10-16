@@ -9,3 +9,17 @@
   background-position: center;
   background-size: cover;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fbfbfb;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3A3F44;
+  border-radius: 12px;
+}
